@@ -1,5 +1,0 @@
-Frames
-=====
-
-BaseKit Eccomerce Template
-
