@@ -32,11 +32,14 @@
 
       <div class="wrapper clearfix">
           <a name="anchor"></a>
-              {{widget('ecombasket', 'ecombasket', {})|raw}}
+
+          {#
+          {{widget('ecombasket', 'ecombasket', {})|raw}}
               {{widget('ecomcheckout', 'ecomcheckout', {})|raw}}
               {{widget('ecomproductslist', 'ecomproductslist', {})|raw}}
               {{widget('ecomproduct', 'ecomproduct', {})|raw}}
               {{zone('main')|raw}}
+          #}
       </div>
 
       </div>
