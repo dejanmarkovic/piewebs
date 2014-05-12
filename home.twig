@@ -2,61 +2,43 @@
 
 {% block content %}
 
-<div class="full-height">
-    <div class="featureimage">
-          {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
-      <header class="bk-header">
-          <div class="header-container wrapper clearfix">
-            <div class="companyheader clearfix">
-                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-                {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
-            </div>
-              {{widget('extendednavigation', 'navigationheader', {})|raw}}
-          </div>
-      </header> 
+<section>
+    {{widget('feature', 'featurehome', {"header": "", "strapline":"", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
+</section>
+
+<header class="bk-header">
+    <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+        </div>
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
     </div>
-        <div class="content-background">
-              <div class="content-container wrapper">
-                  <div class="content-left">
-                      {{widget('content', 'textbox1', {content: '<h4>About Us</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus accumsan varius est fermentum malesuada. ', lines: 'all'})|raw}}
-                  </div>
-                  <div class="content-center">
-                      {{widget('content', 'textbox2', {content: '<h4>Delivery Information</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus.', lines: 'all'})|raw}}
-                  </div>
-                  <div class="content-right">
-                    {{widget('content', 'textbox3', {content: '<h4>Returns Policy</h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan varius est fermentum malesuada. Phasellus accumsan.', lines: 'all'})|raw}}
-                  </div>
-              </div>
-          </div>
-      </div>
+</header>
 
-      <div class="wrapper clearfix">
-          <a name="anchor"></a>
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>
 
-          {#
-          {{widget('ecombasket', 'ecombasket', {})|raw}}
-              {{widget('ecomcheckout', 'ecomcheckout', {})|raw}}
-              {{widget('ecomproductslist', 'ecomproductslist', {})|raw}}
-              {{widget('ecomproduct', 'ecomproduct', {})|raw}}
-              {{zone('main')|raw}}
-          #}
-      </div>
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-two-25-75">
+            <div class="column columns-two-left">
+                {{widget('content', 'footercolumn1content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
 
-      </div>
-          
-      <footer class="bk-footer">
-              <div class="footer-container wrapper clearfix">
-                  <div class="footer-left">
-                      {{widget('companyname', 'companyname', {"business": "FRAMES"})|raw}}
-                  </div>
-                  <div class="footer-center">
-                      {{widget('content', 'textbox4', {content: '<h4>Delivery Information</h4> <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan.</p>', lines: 'all'})|raw}}
-                  </div>
-                  <div class="footer-right">
-                    {{widget('profile', 'footersocialicons', { 'profileType':'socialicons', 'socialicons':'profile', 'refreshtime':'1800000'})|raw}}
-                  </div>
-                </div>
-      </footer>
+                {{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}}
+            </div>
+            <div class="column columns-two-right">
+
+                {{widget('content', 'footercolumn2content1', {"content":"<h2>Lorem Ip Soda</h2>"})|raw}}
+
+                {{widget('profile', 'footcolumn2profilecopyright', { 'profileType':'copyright', 'copyright':'profile'})|raw}}
+
+                {{widget('profile', 'footcolumn2profilesocialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+
+            </div>
+        </div>
+    </div>
+</footer>
 
 {% endblock %}
-
