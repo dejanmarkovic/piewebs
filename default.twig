@@ -1,6 +1,6 @@
 {% extends "layout.twig" %}
-{#
-{% block content %} #}
+
+{% block content %} 
 
 <header class="bk-header">
     <div class="wrapper clearfix">
@@ -11,7 +11,9 @@
         {{widget('extendednavigation', 'navigationheader', {})|raw}}
     </div>
 </header>
-
+<aside>
+    {{widget('content', 'footercolumn3', {"content":"<h2>This is Dejan's content</h2><p>Content goes here </p>"})|raw}}
+</aside>
 <div class="main wrapper clearfix">
     {{zone('main')|raw}}
 </div>
