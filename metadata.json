@@ -3,7 +3,7 @@
     "thumbnail": "test.png",
     "screenshot": "test.png",
     "pageTypes": [
-        "default"
+        "home"
     ],
     "tags": {
         "en": [
