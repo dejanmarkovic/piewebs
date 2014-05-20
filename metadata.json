@@ -2,7 +2,7 @@
     "name": "test2",
     "thumbnail": "test.png",
     "screenshot": "test.png",
-    "pageTypes": ["default"],
+    "pageTypes": ["default" ,"home"],
     "tags": {
         "en": [
 
