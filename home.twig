@@ -3,8 +3,9 @@
 {% block content %}
 
 <section>
-    {{widget('feature', 'featurehome', {"header": "", "strapline":"", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
+    {{widget('feature', 'featurehome', {"header": "", "strapline":"", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/founders_icon_p1.png'), 'positionTopPercentage': '0','showBtn': false})|raw}}
 </section>
+
 
 <header class="bk-header">
     <div class="wrapper clearfix">
@@ -16,10 +17,11 @@
     </div>
 </header>
 
+
 <div class="main wrapper clearfix">
     {{zone('main')|raw}}
 </div>
-<!--
+
 <footer class="bk-footer">
     <div class="wrapper clearfix">
         <div class="responsivecolumns columns-two-25-75">
@@ -40,6 +42,5 @@
         </div>
     </div>
 </footer>
--->
 
 {% endblock %}
