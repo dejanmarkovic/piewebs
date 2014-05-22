@@ -2,28 +2,34 @@
 
 {% block content %}
 
-<section>
-    {{widget('feature', 'featurehome', {"header": "", "strapline":"", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
-</section>
-This is a test
-<!-- pieprelaunch footer begins -->
-    <div class="container">
-        <p style="padding-top:40px;" class="text-center"><a href="#"><img src="{{asset('images/PIE247-logo-web-small.png')}}"></a></p>
-        <p class="text-center"><a href="#">Disclaimer</a> / <a href="#">Privacy</a><br>&copy; 2014 PIE 24/7. All rights reserved.</p>
-    </div>
- <!-- pieprelaunch footer ends -->
-
-
- <footer class="container">
-        <div class="row">
-                <div class="col-sm-9">
-                    {{widget('content', 'footercolumn1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis rutrum lacus gravida. Proin feugia libero quis.</p>"})|raw}}
-                </div>
-                <div class="col-sm-3">
-                    {{widget('content', 'footercolumn2', {"content":"<h2>Aliquam Sodales</h2><p>Copyright © 2013. All Rights Reserved.</p>"})|raw}}
-
-                    {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
-                </div>
+<header class="bk-header">
+    <div class="wrapper clearfix">
+        <div class="companyheader clearfix">
+             {# {{widget('logo', 'logo', {"defaultlogo": asset('images/1.jpg')})|raw}} #}
+             {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+             {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
         </div>
+        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+    </div>
+</header>
+
+<div class="main wrapper clearfix">
+    {{zone('main')|raw}}
+</div>
+
+<footer class="bk-footer">
+    <div class="wrapper clearfix">
+        <div class="responsivecolumns columns-two-50-50">
+            <div class="column columns-two-left">
+                {{widget('content', 'footercolumn1', {"content":"<h2>Lorem Ip Soda</h2><p>Integer a Tortor Dui. Nullam nec ante mi. Morbi sodales urna sit amet mauris elementum quis rutrum lacus gravida. Proin feugia libero quis.</p>"})|raw}}
+            </div>
+            <div class="column columns-two-right">
+                {{widget('content', 'footercolumn2', {"content":"<h2>Aliquam Sodales</h2><p>Copyright © 2013. All Rights Reserved.</p>"})|raw}}
+
+                {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+            </div>
+        </div>
+    </div>
 </footer>
+
 {% endblock %}

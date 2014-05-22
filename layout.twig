@@ -27,13 +27,12 @@
 
 	{% include basekit.headScript %}
 </head>
-<body class=""> <!-- {{ page.backgroundClass }}  -->
+<body class="{{ page.backgroundClass }}">
 
 	{% block content %}
 	{% endblock %} 
 	{% include basekit.bodyScript %}
 
-<!--
 <script type="text/javascript">
 	! function () {
 	    function supportsSVG() {
@@ -42,7 +41,6 @@
 	    if (supportsSVG()) document.documentElement.className += ' svg'
 	}()
 </script>
--->
 </body>
 </html>
 
