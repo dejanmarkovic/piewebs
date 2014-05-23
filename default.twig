@@ -1,15 +1,10 @@
 {% extends "layout.twig" %}
 
 {% block content %}
-
-
-
-
     <div id="header" class="bg-pie-blue">
         <div class="container">
             <div class="row">
                 <div class="col-sm-2 col-xs-12 text-center">
-
                     <img src="{{asset('images/PIE247-logo-white.png')}}" class="img-responsive" style="margin:0 auto; max-width:100px; margin-top:10px;">
                 </div>
                 <div class="col-sm-10 col-xs-12">
@@ -25,5 +20,28 @@
         </div> <!-- /container -->
     </div> <!-- /header -->
 
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12">
+                <div class="video-wrapper">
+                    <iframe width="560" height="315" src="http://www.youtube.com/embed/BkLPcS1DnE8" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div> <!-- /row -->
+
+        <div class="row">
+
+            <div class="col-xs-12 text-center">
+                <p>
+                    <a href="https://pie247.com/sign-up/" class="btn btn-success btn-lg" role="button" style="margin-bottom:10px;">JOIN NOW!</span></a>
+                    <a href="product.html" class="btn btn-warning btn-lg" role="button" style="margin-bottom:10px;">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
+                </p>
+            </div>
+
+        </div> <!-- /row -->
+
+    </div> <!-- /container -->
 
 {% endblock %}
