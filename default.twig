@@ -2,9 +2,27 @@
 
 {% block content %}
 
-<section>
-    {{widget('feature', 'featurehome', {"header": "", "strapline":"", "buttonText":"Nullam Posuer","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '0','showBtn': false})|raw}}
-</section>
+
+
+
+    <div id="header" class="bg-pie-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 col-xs-12 text-center">
+                    <img src="images/PIE247-logo-white.png" class="img-responsive" style="margin:0 auto; max-width:100px; margin-top:10px;">
+                </div>
+                <div class="col-sm-10 col-xs-12">
+                    <h2 class="color-white txt-shadow-lg">First Automated $200,000 Pay Matrix!</h2>
+                    <h2 class="color-pie-yellow txt-shadow-lg" style="margin-top:0px;">Introducing The PIE 24/7 Business System</h2>
+                </div>
+                <div class="col-xs-12 text-center">
+                    <a href="index.html" class="btn btn-warning btn-lg header-tab" role="button">Company</a>
+                    <a href="product.html" class="btn btn-warning btn-lg header-tab" role="button">Product</a>
+                    <a href="money.html" class="btn btn-warning btn-lg header-tab" role="button">Money</a>
+                </div>
+            </div> <!-- /row -->
+        </div> <!-- /container -->
+    </div> <!-- /header -->
 
 
 {% endblock %}
