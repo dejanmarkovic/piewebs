@@ -1,8 +1,11 @@
 {
-    "name": "test",
-    "thumbnail": "test.png",
-    "screenshot": "test.png",
-    "pageTypes": ["home"],
+    "name": "piewebs1",
+    "thumbnail": "piewebs1.png",
+    "screenshot": "piewebs1.png",
+    "pageTypes": [
+        "home",
+        "company"
+    ],
     "tags": {
         "en": [
 
