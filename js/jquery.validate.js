@@ -3,7 +3,7 @@
 * Copyright (c) 2012 Jörn Zaefferer; Licensed MIT, GPL */
 //alert("validate");
 (function($) {
-    alert("validate in");
+  // alert("validate in");
 $.extend($.fn, {
 	// http://docs.jquery.com/Plugins/Validation/validate
 	validate: function( options ) {
