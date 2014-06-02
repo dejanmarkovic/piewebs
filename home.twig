@@ -1,6 +1,7 @@
 {% extends "layout.twig" %}
 
 {% block content %}
+
     <!-- Fixed navbar -->
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="main-nav">
         <div class="container">
@@ -19,43 +20,52 @@
                     <li><a href="/company">Company</a></li>
                     <li><a href="/company#section-products">Products</a></li>
                     <li><a href="/company/#section-money">Money</a></li>
-                   <li><a href="#" data-toggle="modal" data-target="#myModal">Contact</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal">Contact</a></li>
                 </ul>
             </div><!--/.nav-collapse -->
         </div>
     </div>
+
     <section id="section-home" style="padding-top:50px;">
 
-        <div class="content-block bg-pie-blue">
+        <div class="content-block bg-pie-blue dropshadow1">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-7">
+                    <div class="col-sm-8">
                         <div class="video-wrapper">
                             <iframe src="http://fast.wistia.net/embed/iframe/m8uqclh1mz?videoFoam=true" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" allowfullscreen mozallowfullscreen webkitallowfullscreen oallowfullscreen msallowfullscreen width="640" height="388"></iframe><script src="http://fast.wistia.net/assets/external/iframe-api-v1.js"></script>
                         </div>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-sm-4">
                         <h2 class="color-white txt-shadow">Enroll Today!</h2>
                         <form role="form">
                             <div class="form-group">
-                                <label for="exampleInputEmail2">Email:</label>
-                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter your email...">
+                                <label for="exampleSponsorKey">Sponsor Key</label>
+                                <input type="text" class="form-control" id="exampleSponsorKey" placeholder="Your sponsor key...">
                             </div>
-                            <button type="submit" class="btn btn-default">REGISTER <span class="glyphicon glyphicon-chevron-right"></span></button>
+                            <div class="form-group">
+                                <label for="exampleInputName2">Name</label>
+                                <input type="text" class="form-control" id="exampleInputName2" placeholder="Your name...">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail2">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Your email...">
+                            </div>
+                            <button type="submit" class="btn btn-warning dropshadow1 btn-dark">REGISTER <span class="glyphicon glyphicon-chevron-right"></span></button>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="content-block bg-white">
+        <div class="content-block">
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
-                        <img src="{{asset('images/tom.png')}}" class="img-responsive img-circle img-frame" style="margin:0 auto; width:100%; max-width:200px;">
+                        <img src="{{asset('images/portrait2.png')}}" class="img-responsive img-circle img-frame" style="margin:0 auto; width:100%; max-width:200px;">
                     </div>
                     <div class="col-sm-9">
-                        <h4><em>“I believe we have some of the best online marketing resources and tools in the world – digital products that are delivered instantly and that help everyone become a better entrepreneur in any program.  As a result, we do not compete with other home businesses, but help you build them. PIE 24/7 was designed to help support you in all your ventures.” </em></h4>
-                        <h4 class="color-pie-orange">Tom Cellie, Independent Entrepreneur, Missouri</h4>
+                        <h4><em>“PIE 24/7 has some of the best online marketing resources and tools in the world – digital products that are delivered instantly and that help everyone become a better entrepreneur in any program.  As a result, PIE 24/7 does not compete with other home businesses, but helps you build them. PIE 24/7 was designed to help support you in all your ventures.” </em></h4>
+                        <h4 class="color-pie-orange">Diane K., Independent Entrepreneur, Missouri, US</h4>
                     </div>
                 </div>
             </div>
@@ -69,7 +79,7 @@
                     </div>
                     <div class="col-sm-9">
                         <h4><em>“My friends all recommended that I give PIE a shot, so I did. I was impressed at how simple it was to start making real money online. If you haven't started yet, there's no better time!” </em></h4>
-                        <h4 class="color-pie-orange">Some Person, Planet Earth</h4>
+                        <h4 class="color-pie-orange">Lisa R., Montreal, QC, Canada</h4>
                     </div>
                 </div>
             </div>
@@ -79,10 +89,11 @@
 
     <div class="container" id="footer">
 
+        <!-- <p class="text-center"><strong><a href="#">Home</a> / <a href="#">Company</a> / <a href="#">Products</a> / <a href="#">Money</a> / <a href="#">Contact</a></strong></p> -->
         <p class="text-center"><a href="#"><img src="{{asset('images/logo.png')}}" class="img-responsive" style="margin:0 auto; width:100%; max-width:100px;"></a></p>
-        <p class="text-center">&copy; <a href="#">PIE 24/7</a> 2014. All rights reserved.</p>
+        <p class="cp text-center">&copy; <a href="http://pie247.com" target="_blank">PIE 24/7</a> 2014. All rights reserved.<br><a href="#">Privacy</a> / <a href="#">Terms</a></p>
 
-    </div> <!-- /container -->
+    </div><!-- /container -->
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -110,6 +121,7 @@
                         </div>
                         <button type="submit" class="btn btn-success">Send Email</button>
                     </form>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -132,7 +144,7 @@
                 e.preventDefault();
                 // animate
                 $('html, body').animate({
-                    scrollTop: $(this.hash).offset().top
+                    scrollTop: $(this.hash).offset().top - 50
                 }, 500, function(){
                     // when done, add hash to url
                     // (default click behaviour)
