@@ -2,13 +2,13 @@
  * Created by dmarkovic on 02/06/14.
  */
 jQuery(document).ready(function($) {
-    alert('global.js');
+  //  alert('global.js');
     setup_registration_form();
 });
 
 function setup_registration_form()
 {
-    alert('setup_registration_form');
+   // alert('setup_registration_form');
 
     $("#registration").validate(
         {
