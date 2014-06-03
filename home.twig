@@ -110,20 +110,24 @@
                 <div class="modal-body">
 
                     <p><strong>Have any questions or comments?</strong><br>Please feel free to send us an email through this form:</p>
-                    <form role="form">
+                    <form role="form" id="contact" name="contact" method="post" action="MAILTO:dmarkovic@matrixsoftwaregroup.net">
                         <div class="form-group">
-                            <label for="exampleInputName1" class="color-pie-orange">Name</label>
-                            <input type="text" class="form-control" id="exampleInputName1" placeholder="Your name...">
+                            <label for="cfname" class="color-pie-orange">First Name</label>
+                            <input type="text" class="form-control" id="cfname" name="cfname" placeholder="Your name...">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1" class="color-pie-orange">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your email...">
+                            <label for="clname" class="color-pie-orange">Last Name</label>
+                            <input type="text" class="form-control" id="clname" name="clname" placeholder="Your name...">
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputMessage1" class="color-pie-orange">Message</label>
-                            <textarea class="form-control" id="exampleInputMessage1" rows="3" placeholder="Your message..."></textarea>
+                            <label for="cemail" class="color-pie-orange">Email</label>
+                            <input type="email" class="form-control" id="cemail" name="cemail" placeholder="Your email...">
                         </div>
-                        <button type="submit" class="btn btn-success">Send Email</button>
+                        <div class="form-group">
+                            <label for="cmessage" class="color-pie-orange">Message</label>
+                            <textarea class="form-control" id="cmessage" name="cmessage" rows="3" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" id="submit2" class="btn btn-success">Send Email</button>
                     </form>
 
                 </div>
