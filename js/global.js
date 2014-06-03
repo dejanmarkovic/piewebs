@@ -2,13 +2,14 @@
  * Created by dmarkovic on 02/06/14.
  */
 jQuery(document).ready(function($) {
-  //  alert('global.js');
     setup_registration_form();
 });
 
 function setup_registration_form()
 {
-   // alert('setup_registration_form');
+    $("#submit").click(function () {
+        $("#registration").submit();
+    });
 
     $("#registration").validate(
         {
@@ -33,7 +34,7 @@ function setup_registration_form()
             },
             messages: {
                 enrollerKeyCode:  {
-                    required: "Please enter the sponsor key of the person who directed you here.<br />  NOTE: If you don't have a sponsor key, please click <a href='mailto:reghelp@pie247.com'>here</a> for help. "
+                    required: "Please enter the sponsor key of the person who directed you here."
                 }
             },
             highlight: function(label) {
@@ -44,28 +45,4 @@ function setup_registration_form()
                     .closest('.control-group').addClass('success');
             }
         });
-
-/*
-    jQuery('form#registration').submit(
-        function(e){
-
-            alert('form submit reg accepted' + reg_accepted);
-            if(reg_accepted) {
-
-                return true;
-            }
-
-            //console.log('inside Registration form Submit');
-            e.preventDefault();
-
-            var defaultKeyCode = false;
-
-
-            var valid = jQuery('form#registration input, form#registration select').valid();
-
-            if (valid) {
-
-            }
-        });
-*/
 }
