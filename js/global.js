@@ -50,9 +50,7 @@ function setup_registration_form()
 
 function setup_contact_form()
 {
-    //alert('setup_contact_form');
     $("#submit2").click(function () {
-        alert('submit2');
         $("#contact").submit();
     });
 
